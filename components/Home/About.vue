@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mb-4">
     <h2
       class="text-3xl text-left underline decoration-border decoration-4 underline-offset-8 mb-4"
     >
