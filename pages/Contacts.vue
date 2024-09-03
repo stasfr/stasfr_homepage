@@ -1,5 +1,5 @@
 <template>
-  <div class="box-border w-[440px] my-0 mx-auto px-4 text-center">
+  <div class="box-content w-[440px] mx-auto px-4 text-center">
     <h2
       class="text-3xl text-left underline decoration-border decoration-4 underline-offset-8 mb-4"
     >

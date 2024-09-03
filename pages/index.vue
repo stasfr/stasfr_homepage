@@ -1,5 +1,5 @@
 <template>
-  <div class="box-border max-w-[440px] my-0 mx-auto px-4 text-center">
+  <div class="box-content max-w-[440px] mx-auto px-4 text-center">
     <div class="bg-primary py-2 px-12 rounded mb-8 text-textDark">
       From Russian frontend with love!
     </div>

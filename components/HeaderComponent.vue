@@ -3,7 +3,7 @@
     class="absolute w-full left-0 top-0 z-50 border-b-[1px] border-border"
   >
     <div
-      class="flex min-h-16 items-center justify-between box-border max-w-[1000px] my-0 mx-auto px-4"
+      class="flex min-h-16 items-center justify-between box-content max-w-[1000px] mx-auto px-4"
     >
       <nuxt-link to="/" class="font-bold">stas_fr</nuxt-link>
       <nav>

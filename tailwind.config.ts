@@ -1,6 +1,13 @@
 module.exports = {
   darkMode: "class",
   theme: {
+    screens: {
+      xs: "321px",
+      sm: "769px",
+      md: "1025px",
+      lg: "1441px",
+      xl: "2561px",
+    },
     extend: {
       colors: {
         textLight: "#f0f2f5",
