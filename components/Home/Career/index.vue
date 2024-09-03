@@ -6,12 +6,26 @@
       Career
     </h2>
     <div>
-      <HomeCareerStep v-for="step in 15" :num="step" />
+      <HomeCareerStep
+        v-for="(timestamp, index) in timeline"
+        :timestampData="timestamp"
+        :index="index"
+      />
     </div>
-    <hr />
   </div>
 </template>
 
-<script setup></script>
-
-<style></style>
+<script setup>
+const timeline = ref([
+  {
+    year: 2000,
+    title: "I was born",
+    text: "I was born and could build a PC with closed eyes.",
+  },
+  {
+    year: 2024,
+    title: "Im doing this site",
+    text: "im writing this",
+  },
+]);
+</script>

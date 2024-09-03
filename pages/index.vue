@@ -15,12 +15,12 @@
       />
     </div>
     <HomeAbout v-for="section in sections" :section="section" />
-    <HomeCareer />
+    <HomeCareer v-if="(careerType = 'timeline')" />
   </div>
 </template>
 
 <script setup>
-const sections = [
+const sections = ref([
   {
     title: "About",
     text: "I started programming at school, I wrote programs in Pascal. Now I write code in JS, HTML, CSS, Python and VBA.",
@@ -33,5 +33,7 @@ const sections = [
     link: "/contacts",
     btnTitle: "Call me",
   },
-];
+]);
+
+const careerType = ref("timeline");
 </script>
