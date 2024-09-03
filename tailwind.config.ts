@@ -8,6 +8,7 @@ module.exports = {
         background: "#1a1a1a",
         primary: "#42d392",
         secondary: "#083b2c",
+        btnHover: "#22886a",
         border: "#404040",
       },
     },
