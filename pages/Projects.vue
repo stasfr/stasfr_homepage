@@ -8,8 +8,20 @@
 
 <script setup>
 const projects = ref([
-  { title: "Saviour Care", link: "/" },
-  { title: "Wine and Dices", link: "/" },
-  { title: "Goglobal", link: "/" },
+  {
+    title: "Saviour Care",
+    link: "https://stasfr.github.io/Saviour-Care/",
+    img: "/img/projects/saviour_care.png",
+  },
+  {
+    title: "Wine and Dices",
+    link: "https://github.com/stasfr/wad-reborn",
+    img: "/img/projects/wad.png",
+  },
+  {
+    title: "Goglobal",
+    link: "https://goglobal.world/",
+    img: "/img/projects/goglobal.png",
+  },
 ]);
 </script>
