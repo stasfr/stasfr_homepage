@@ -1,12 +1,14 @@
 <template>
-  <div class="box-content w-[440px] mx-auto px-4 text-center">
+  <section class="flex flex-col space-y-8">
     <h2
-      class="text-3xl text-left underline decoration-border decoration-4 underline-offset-8 mb-4"
+      class="block text-3xl text-left underline decoration-border decoration-4 underline-offset-8"
     >
       In touch
     </h2>
-    <Contacts v-for="contact in contacts" :contact="contact" />
-  </div>
+    <div class="space-y-4">
+      <Contacts v-for="contact in contacts" :contact="contact" />
+    </div>
+  </section>
 </template>
 
 <script setup>

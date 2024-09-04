@@ -2,11 +2,11 @@ module.exports = {
   darkMode: "class",
   theme: {
     screens: {
-      xs: "321px",
-      sm: "769px",
-      md: "1025px",
-      lg: "1441px",
-      xl: "2561px",
+      xs: "480px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
     },
     extend: {
       colors: {

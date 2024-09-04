@@ -1,7 +1,7 @@
 <template>
-  <div class="mb-4">
+  <div class="space-y-4 text-center">
     <h2
-      class="text-3xl text-left underline decoration-border decoration-4 underline-offset-8 mb-4"
+      class="text-3xl text-left underline decoration-border decoration-4 underline-offset-8"
     >
       Career
     </h2>
@@ -12,6 +12,11 @@
         :index="index"
       />
     </div>
+    <nuxt-link
+      class="rounded bg-primary text-textDark py-2 px-4 hover:bg-btnHover transition-colors duration-300 ease-linear"
+      to="/projects"
+      >My projects</nuxt-link
+    >
   </div>
 </template>
 

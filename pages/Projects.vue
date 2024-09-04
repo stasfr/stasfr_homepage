@@ -1,8 +1,6 @@
 <template>
-  <div class="box-content max-w-[1000px] mx-auto px-4">
-    <div class="grid sm:grid-cols-2 grid-cols-1 gap-8">
-      <Project v-for="project in projects" :project="project" />
-    </div>
+  <div class="grid sm:grid-cols-2 grid-cols-1 gap-8">
+    <Project v-for="project in projects" :project="project" />
   </div>
 </template>
 
