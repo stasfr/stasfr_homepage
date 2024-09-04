@@ -16,6 +16,11 @@
     </div>
     <HomeAbout v-for="section in sections" :section="section" />
     <HomeCareer v-if="(careerType = 'timeline')" />
+    <nuxt-link
+      class="rounded bg-primary text-textDark py-2 px-4 hover:bg-btnHover transition-colors duration-300 ease-linear"
+      to="/projects"
+      >My projects</nuxt-link
+    >
   </div>
 </template>
 
