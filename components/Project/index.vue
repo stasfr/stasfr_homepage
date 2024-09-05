@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col p-4 bg-primary text-textDark rounded text-center space-y-4 w-72"
+    class="flex flex-col p-4 bg-primary text-textDark rounded text-center space-y-4 w-72 md:w-auto"
   >
     <h3 class="text-xl font-bold">
       {{ props.project.title }}
