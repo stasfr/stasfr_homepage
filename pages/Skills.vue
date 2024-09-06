@@ -1,7 +1,7 @@
 <template>
   <section class="grid-cols-4 gap-4 grid">
     <div class="p-4 bg-primary rounded">
-      <UIIconsBrandsVue />
+      <component :is="IconVue"></component>
     </div>
     <div class="p-4 bg-primary rounded">
       <UIIconsBrandsCSS />
@@ -51,4 +51,6 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+const IconVue = resolveComponent("UIIconsBrandsVue");
+</script>
