@@ -1,6 +1,6 @@
 <template>
   <div
-    class="cursor-pointer p-4 bg-primary rounded text-textDark hover:bg-btnHover transition-colors duration-200 ease-linear text-center"
+    class="flex flex-col items-center justify-center cursor-pointer size-24 bg-primary rounded text-textDark hover:bg-btnHover transition-colors duration-200 ease-linear text-center"
   >
     <component :is="props.icon" class="w-12 h-12"></component>
     <p>{{ title }}</p>
