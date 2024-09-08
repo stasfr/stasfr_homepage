@@ -1,7 +1,7 @@
 <template>
   <section class="flex flex-col space-y-8">
     <h2
-      class="block text-3xl text-left underline decoration-border decoration-4 underline-offset-8"
+      class="block text-3xl text-center underline decoration-border decoration-4 underline-offset-8"
     >
       In touch
     </h2>

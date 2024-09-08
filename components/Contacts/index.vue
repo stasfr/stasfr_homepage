@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-around">
+  <div class="flex items-center justify-around space-x-16">
     <div>{{ props.contact.title }}</div>
     <a
       class="rounded bg-primary text-textDark py-2 px-4 hover:bg-btnHover transition-colors duration-300 ease-linear"
