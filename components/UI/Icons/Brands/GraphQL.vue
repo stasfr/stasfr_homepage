@@ -1,6 +1,5 @@
 <template>
   <svg
-    class="w-6 h-6 text-textDark"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -13,12 +12,3 @@
     />
   </svg>
 </template>
-
-<script setup>
-const props = defineProps({
-  dark: {
-    type: Boolean,
-    default: true,
-  },
-});
-</script>
