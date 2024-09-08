@@ -1,6 +1,6 @@
 <template>
   <div class="p-4 bg-primary rounded">
-    <component :is="props.icon" class="w-16 h-16 text-textDark"></component>
+    <component :is="props.icon" class="w-12 h-12 text-textDark"></component>
   </div>
 </template>
 

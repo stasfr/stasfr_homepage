@@ -1,5 +1,5 @@
 <template>
-  <section class="grid-cols-4 gap-4 grid">
+  <section class="grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 gap-6 grid">
     <UIIconsIconBrand v-for="icon in icons" :icon="icon" />
   </section>
 </template>
