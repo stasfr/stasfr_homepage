@@ -1,11 +1,12 @@
 <template>
   <section class="flex flex-col items-center space-y-8">
     <div
+      v-motion-slide-top
       class="bg-primary py-2 rounded text-textDark w-full xs:w-auto xs:px-12 text-center"
     >
       From Russian frontend with love!
     </div>
-    <div class="flex items-center">
+    <div class="flex items-center" v-motion-slide-top>
       <div class="space-y-2">
         <div class="text-3xl xs:text-4xl font-bold">Stanislav Farkash</div>
         <div class="text-md text-left">Moscow, Russia</div>
@@ -16,8 +17,12 @@
         alt="photo"
       />
     </div>
-    <HomeAbout v-for="section in sections" :section="section" />
-    <HomeCareer v-if="(careerType = 'timeline')" />
+    <HomeAbout
+      v-for="section in sections"
+      :section="section"
+      v-motion-slide-bottom
+    />
+    <HomeCareer v-if="(careerType = 'timeline')" v-motion-slide-bottom />
   </section>
 </template>
 

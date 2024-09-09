@@ -1,6 +1,6 @@
 <template>
   <div class="grid md:grid-cols-2 grid-cols-1 gap-8">
-    <Project v-for="project in projects" :project="project" />
+    <Project v-for="(project, index) in projects" :project="project" />
   </div>
 </template>
 

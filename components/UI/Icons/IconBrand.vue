@@ -1,5 +1,7 @@
 <template>
   <div
+    v-motion-pop-visible
+    :delay="delay"
     class="flex flex-col items-center justify-center cursor-pointer size-24 bg-primary rounded text-textDark hover:bg-btnHover transition-colors duration-200 ease-linear text-center"
   >
     <component :is="props.icon" class="w-12 h-12"></component>
@@ -16,6 +18,10 @@ const props = defineProps({
   title: {
     type: String,
     required: true,
+  },
+  delay: {
+    type: Number,
+    default: 100,
   },
 });
 </script>

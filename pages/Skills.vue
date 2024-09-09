@@ -4,6 +4,7 @@
       v-for="icon in icons"
       :icon="icon.icon"
       :title="icon.title"
+      :delay="Math.floor(Math.random() * 2) * 100"
     />
   </section>
 </template>

@@ -1,5 +1,7 @@
 <template>
   <div
+    v-motion-slide-top
+    :delay="Math.floor(Math.random() * 3) * 100"
     class="flex flex-col p-4 bg-primary text-textDark rounded text-center space-y-4 w-72 md:w-auto"
   >
     <h3 class="text-xl font-bold">
@@ -26,5 +28,14 @@ const props = defineProps({
     type: Object,
     required: true,
   },
+  index: {
+    type: Number,
+    required: true,
+  },
+});
+
+const animationType = ref({
+  1: "v-motion-slide-left",
+  0: "v-motion-slide-right",
 });
 </script>

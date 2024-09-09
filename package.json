@@ -13,6 +13,7 @@
     "@nuxt/image": "^1.8.0",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@pinia/nuxt": "^0.5.4",
+    "@vueuse/motion": "^2.2.5",
     "nuxt": "^3.13.0",
     "vue": "latest"
   }

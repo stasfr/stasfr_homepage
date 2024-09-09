@@ -1,11 +1,12 @@
 <template>
   <section class="flex flex-col space-y-8">
     <h2
+      v-motion-slide-top
       class="block text-3xl text-center underline decoration-border decoration-4 underline-offset-8"
     >
       In touch
     </h2>
-    <div class="space-y-4">
+    <div class="space-y-4" v-motion-slide-top>
       <Contacts v-for="contact in contacts" :contact="contact" />
     </div>
   </section>
