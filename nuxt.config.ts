@@ -7,8 +7,13 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxt/image",
     "@vueuse/motion/nuxt",
+    "@nuxtjs/color-mode",
   ],
   alias: {
     pinia: "/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs",
+  },
+  colorMode: {
+    preference: "dark",
+    classSuffix: "",
   },
 });

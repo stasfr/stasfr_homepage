@@ -1,6 +1,6 @@
 <template>
   <div
-    class="overflow-hidden flex flex-col bg-background text-textLight min-h-screen"
+    class="overflow-hidden flex flex-col bg-backgroundLight dark:bg-background text-black dark:text-textLight min-h-screen transition-colors duration-300"
   >
     <UIHeaderComponent class="z-50" />
     <UIDogModelComponent
