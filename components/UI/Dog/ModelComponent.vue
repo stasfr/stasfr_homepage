@@ -72,7 +72,7 @@ onMounted(() => {
     camera.position.copy(initialCameraPosition);
     camera.lookAt(target);
 
-    const ambientLight = new THREE.AmbientLight(0xcccccc, 1.2);
+    const ambientLight = new THREE.AmbientLight(0xcccccc, 5);
     scene.add(ambientLight);
 
     const controls = new OrbitControls(camera, renderer.domElement);
