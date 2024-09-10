@@ -1,3 +1,5 @@
+import daisyui from "daisyui";
+
 module.exports = {
   darkMode: "class",
   theme: {
@@ -20,4 +22,5 @@ module.exports = {
       },
     },
   },
+  plugins: [daisyui],
 };
