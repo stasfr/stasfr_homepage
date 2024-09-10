@@ -12,6 +12,11 @@
         </ul>
       </nav>
       <div class="flex gap-3">
+        <label class="swap swap-rotate">
+          <input type="checkbox" @click="theme == 'dark' ? 'light' : 'dark'" />
+          <UIIconsLight />
+          <UIIconsDark />
+        </label>
         <label
           class="btn btn-circle swap swap-rotate border-none bg-inherit sm:hidden text-textLight"
         >
@@ -24,6 +29,7 @@
           <UIIconsClose />
         </label>
       </div>
+      <!-- mobile menu -->
       <div
         v-if="mobileMenu"
         class="fixed right-4 top-16 w-full max-w-[150px] rounded-md bg-primary text-textDark"
@@ -59,4 +65,6 @@
 <script setup>
 const mobileMenu = ref(false);
 const checkbox = ref(false);
+
+const theme = ref("dark");
 </script>
