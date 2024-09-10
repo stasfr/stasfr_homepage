@@ -23,7 +23,7 @@
           <UIIconsDark />
         </label>
         <label
-          class="btn btn-circle swap swap-rotate border-none bg-inherit sm:hidden text-textLight"
+          class="btn btn-circle swap swap-rotate border-none bg-inherit sm:hidden dark:text-textLight text-textDark"
         >
           <input
             v-model="checkbox"
