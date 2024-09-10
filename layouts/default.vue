@@ -2,8 +2,13 @@
   <div
     class="overflow-hidden flex flex-col bg-background text-textLight min-h-screen"
   >
-    <UIHeaderComponent />
-    <main class="box-content max-w-lg mx-auto px-4 my-24 min-h-[70vh]">
+    <UIHeaderComponent class="z-50" />
+    <UIDogModelComponent
+      class="m-auto -mb-[64px] mt-[24px] xs:-mb-[140px] xs:-mt-[10px] md:-mb-[200px] md:-mt-[60px]"
+    />
+    <main
+      class="box-content max-w-lg mx-auto px-4 mb-24 mt-12 min-h-[70vh] z-50"
+    >
       <slot />
     </main>
     <UIFooterComponent />
