@@ -4,7 +4,7 @@
       class="flex min-h-12 items-center justify-between box-content max-w-lg mx-auto px-4"
     >
       <nuxt-link to="/" class="font-bold">stas_fr</nuxt-link>
-      <nav class="hidden md:block">
+      <nav class="hidden sm:block">
         <ul class="flex flex-wrap space-x-4">
           <li><nuxt-link to="/projects">Projects</nuxt-link></li>
           <li><nuxt-link to="/skills">Skills</nuxt-link></li>
@@ -13,7 +13,7 @@
       </nav>
       <div class="flex gap-3">
         <label
-          class="btn btn-circle swap swap-rotate border-none bg-inherit md:hidden text-textLight"
+          class="btn btn-circle swap swap-rotate border-none bg-inherit sm:hidden text-textLight"
         >
           <input
             v-model="checkbox"
@@ -24,47 +24,34 @@
           <UIIconsClose />
         </label>
       </div>
-      <transition name="fade"
-        ><div
-          v-if="mobileMenu"
-          class="fixed right-4 top-16 w-full max-w-[150px] rounded-md"
-        >
-          <ul class="flex flex-col gap-1">
+      <div
+        v-if="mobileMenu"
+        class="fixed right-4 top-16 w-full max-w-[150px] rounded-md bg-primary text-textDark"
+      >
+        <ul class="flex flex-col gap-1 mx-4 my-2 space-y-2">
+          <li>
             <nuxt-link
               @click="(checkbox = !checkbox), (mobileMenu = !mobileMenu)"
-              to="/blog"
+              to="/projects"
+              >Projects</nuxt-link
             >
-              <li class="p-2">
-                <span>Blog</span>
-              </li>
-            </nuxt-link>
-            <nuxt-link
-              @click="(checkbox = !checkbox), (mobileMenu = !mobileMenu)"
-              to="/works"
-            >
-              <li class="p-2">
-                <span>Works</span>
-              </li>
-            </nuxt-link>
+          </li>
+          <li>
             <nuxt-link
               @click="(checkbox = !checkbox), (mobileMenu = !mobileMenu)"
               to="/skills"
+              >Skills</nuxt-link
             >
-              <li class="p-2">
-                <span>Skills</span>
-              </li>
-            </nuxt-link>
+          </li>
+          <li>
             <nuxt-link
               @click="(checkbox = !checkbox), (mobileMenu = !mobileMenu)"
-              to="/contact"
+              to="/contacts"
+              >Contacts</nuxt-link
             >
-              <li class="p-2">
-                <span>Contact</span>
-              </li>
-            </nuxt-link>
-          </ul>
-        </div>
-      </transition>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
 </template>
