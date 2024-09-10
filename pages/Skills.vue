@@ -1,11 +1,19 @@
 <template>
-  <section class="grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 gap-6 grid">
-    <UIIconsIconBrand
-      v-for="icon in icons"
-      :icon="icon.icon"
-      :title="icon.title"
-      :delay="Math.floor(Math.random() * 2) * 100"
-    />
+  <section class="flex flex-col space-y-8">
+    <h2
+      v-motion-slide-top
+      class="block text-3xl text-center underline decoration-border decoration-4 underline-offset-8"
+    >
+      My skills
+    </h2>
+    <div class="grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 gap-6 grid">
+      <UIIconsIconBrand
+        v-for="icon in icons"
+        :icon="icon.icon"
+        :title="icon.title"
+        :delay="Math.floor(Math.random() * 2) * 100"
+      />
+    </div>
   </section>
 </template>
 
