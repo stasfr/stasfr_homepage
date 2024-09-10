@@ -13,7 +13,12 @@
       </nav>
       <div class="flex gap-3">
         <label class="swap swap-rotate">
-          <input type="checkbox" @click="theme == 'dark' ? 'light' : 'dark'" />
+          <input
+            type="checkbox"
+            @click="
+              setColorTheme($colorMode.preference == 'dark' ? 'light' : 'dark')
+            "
+          />
           <UIIconsLight />
           <UIIconsDark />
         </label>
@@ -66,5 +71,8 @@
 const mobileMenu = ref(false);
 const checkbox = ref(false);
 
-const theme = ref("dark");
+const setColorTheme = (newTheme) => {
+  useColorMode().preference = newTheme;
+  console.log(useColorMode().preference);
+};
 </script>
