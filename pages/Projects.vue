@@ -32,5 +32,12 @@ const projects = ref([
     img: "/img/projects/goglobal.png",
     description: "Vue3.js SPA, made little components (Vue3, JS)",
   },
+  {
+    title: "Alef_test",
+    link: "https://github.com/stasfr/alef-test",
+    img: "/img/projects/alef_test.png",
+    description:
+      "Test project for job interview (Nuxt, TypeScript, Custom components)",
+  },
 ]);
 </script>
