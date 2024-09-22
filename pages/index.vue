@@ -6,16 +6,18 @@
     >
       From Russian frontend with love!
     </div>
-    <div class="flex items-center" v-motion-slide-top>
+    <div class="flex items-center gap-4" v-motion-slide-top>
       <div class="space-y-2">
         <div class="text-3xl xs:text-4xl font-bold">Stanislav Farkash</div>
         <div class="text-md text-left">Moscow, Russia</div>
       </div>
-      <img
-        class="rounded-full md:w-40 w-28 ml-4 border-4 block"
-        src="/assets/img/photo.jpeg"
-        alt="photo"
-      />
+      <div class="tooltip" data-tip="Любимая выбирала">
+        <div class="avatar">
+          <div class="md:w-40 w-28 rounded-full border-4">
+            <img src="/assets/img/avatar.png " />
+          </div>
+        </div>
+      </div>
     </div>
     <HomeAbout
       v-for="section in sections"
