@@ -33,11 +33,18 @@ const projects = ref([
     description: "Vue3.js SPA, made little components (Vue3, JS)",
   },
   {
-    title: "Alef_test",
+    title: "Alef test",
     link: "https://github.com/stasfr/alef-test",
     img: "/img/projects/alef_test.png",
     description:
       "Test project for job interview (Nuxt, TypeScript, Custom components)",
+  },
+  {
+    title: "Todo App",
+    link: "https://github.com/stasfr/todo_app_test",
+    img: "/img/projects/todo_app.png",
+    description:
+      "Test project for job interview (Vue 3, TypeScript, AutoImports, Tailwind)",
   },
 ]);
 </script>
