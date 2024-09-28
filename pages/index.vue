@@ -11,13 +11,12 @@
         <div class="text-3xl xs:text-4xl font-bold">Stanislav Farkash</div>
         <div class="text-md text-left">Moscow, Russia</div>
       </div>
-      <div class="tooltip" data-tip="Любимая выбирала">
-        <div class="avatar">
-          <div class="md:w-40 w-28 rounded-full border-4">
-            <img src="/assets/img/avatar.png " />
-          </div>
-        </div>
-      </div>
+      <Avatar
+        image="/img/avatars/avatar.png"
+        shape="circle"
+        size="xlarge"
+        v-tooltip.top="'Любимая выбирала'"
+      />
     </div>
     <HomeAbout
       v-for="section in sections"
@@ -46,3 +45,10 @@ const sections = ref([
 
 const careerType = ref("timeline");
 </script>
+
+<style scoped>
+/* .p-avatar-xl {
+  width: 6rem;
+  height: 6rem;
+} */
+</style>
