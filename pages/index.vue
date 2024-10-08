@@ -11,19 +11,27 @@
         <div class="text-3xl xs:text-4xl font-bold">Stanislav Farkash</div>
         <div class="text-md text-left">Moscow, Russia</div>
       </div>
-      <Avatar
-        image="/img/avatars/avatar.png"
-        shape="circle"
-        size="xlarge"
+
+      <Image
         v-tooltip.top="'Любимая выбирала'"
-      />
+        src="/img/avatars/avatar.png"
+        alt="avatar"
+        width="200"
+        pt:image:class="rounded-full border-4"
+      >
+      </Image>
     </div>
+
     <HomeAbout
       v-for="section in sections"
       :section="section"
       v-motion-slide-bottom
     />
-    <HomeCareer v-if="(careerType = 'timeline')" v-motion-slide-bottom />
+
+    <HomeCustomTimeline
+      v-motion-slide-bottom
+      :timelineOptions="timelineOptions"
+    />
   </section>
 </template>
 
@@ -43,12 +51,35 @@ const sections = ref([
   },
 ]);
 
-const careerType = ref("timeline");
+const timelineOptions = ref([
+  {
+    year: "2000",
+    title: "I was born",
+    body: "I was born and could build a PC with closed eyes (starting from 7 yeard old).",
+  },
+  {
+    year: "2021 Spring-Summer",
+    title: "Goglobal",
+    site: "https://goglobal.world/",
+    stack: [
+      "Vue.js 3",
+      "HTML5, CSS3 (SASS)",
+      "JavaScript (ES6+)",
+      "REST API",
+      "Git, GitHub",
+    ],
+  },
+  {
+    year: "2022-2024",
+    title: 'PJSC "Rosseti Moscow region"',
+    subtitle:
+      "Managed staff, wrote macros in VBA to automate business-process, organized the work.",
+    site: "https://rossetimr.ru/",
+  },
+  {
+    year: "2024",
+    title: "I'm doing this site",
+    body: "and dream of creating my own product that will make the world a little better (or not a little).",
+  },
+]);
 </script>
-
-<style scoped>
-/* .p-avatar-xl {
-  width: 6rem;
-  height: 6rem;
-} */
-</style>
