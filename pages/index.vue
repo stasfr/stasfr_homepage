@@ -1,15 +1,18 @@
 <template>
   <section class="flex flex-col items-center space-y-8">
-    <div
+    <p
       v-motion-slide-top
-      class="bg-primary py-2 rounded text-textDark w-full xs:w-auto xs:px-12 text-center"
+      class="py-2 rounded w-full xs:w-auto xs:px-12 text-center"
+      id="title"
     >
+      <i class="pi pi-heart"></i>
       From Russian frontend with love!
-    </div>
+    </p>
+
     <div class="flex items-center gap-4" v-motion-slide-top>
       <div class="space-y-2">
-        <div class="text-3xl xs:text-4xl font-bold">Stanislav Farkash</div>
-        <div class="text-md text-left">Moscow, Russia</div>
+        <h1 class="text-3xl xs:text-4xl font-bold">Stanislav Farkash</h1>
+        <p class="text-md text-left">Moscow, Russia</p>
       </div>
 
       <Image
@@ -22,9 +25,21 @@
       </Image>
     </div>
 
-    <HomeAbout
-      v-for="section in sections"
-      :section="section"
+    <HomeCustomSection
+      title="About"
+      text="I started programming at school, I wrote programs in Pascal. Now I write code in JS, HTML, CSS, Python and VBA."
+      link="/skills"
+      buttonIcon="pi pi-star"
+      buttonTitle="See my stack"
+      v-motion-slide-bottom
+    />
+
+    <HomeCustomSection
+      title="Interests"
+      text="I like reading business and psychology books, watch movies and study screenwriting."
+      link="/contacts"
+      buttonIcon="pi pi-envelope"
+      buttonTitle="Call me"
       v-motion-slide-bottom
     />
 
@@ -36,21 +51,6 @@
 </template>
 
 <script setup>
-const sections = ref([
-  {
-    title: "About",
-    text: "I started programming at school, I wrote programs in Pascal. Now I write code in JS, HTML, CSS, Python and VBA.",
-    link: "/skills",
-    btnTitle: "See my stack",
-  },
-  {
-    title: "Interests",
-    text: "I like reading business and psychology books, watch movies and study screenwriting.",
-    link: "/contacts",
-    btnTitle: "Call me",
-  },
-]);
-
 const timelineOptions = ref([
   {
     year: "2000",
@@ -83,3 +83,12 @@ const timelineOptions = ref([
   },
 ]);
 </script>
+
+<style scoped>
+#title {
+  color: var(--p-button-primary-color);
+  background: var(--p-button-primary-background);
+  border: 1px solid var(--p-button-primary-border-color);
+  font-weight: var(--p-button-label-font-weight);
+}
+</style>
