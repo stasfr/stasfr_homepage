@@ -1,3 +1,37 @@
+<script setup>
+const timelineOptions = ref([
+  {
+    year: "2000",
+    title: "I was born",
+    body: "I was born and could build a PC with closed eyes (starting from 7 yeard old).",
+  },
+  {
+    year: "2021 Spring-Summer",
+    title: "Goglobal",
+    site: "https://goglobal.world/",
+    stack: [
+      "Vue.js 3",
+      "HTML5, CSS3 (SASS)",
+      "JavaScript (ES6+)",
+      "REST API",
+      "Git, GitHub",
+    ],
+  },
+  {
+    year: "2022-2024",
+    title: 'PJSC "Rosseti Moscow region"',
+    subtitle:
+      "Managed staff, wrote macros in VBA to automate business-process, organized the work.",
+    site: "https://rossetimr.ru/",
+  },
+  {
+    year: "2024",
+    title: "I'm doing this site",
+    body: "and dream of creating my own product that will make the world a little better (or not a little).",
+  },
+]);
+</script>
+
 <template>
   <section class="flex flex-col items-center space-y-8">
     <p
@@ -49,40 +83,6 @@
     />
   </section>
 </template>
-
-<script setup>
-const timelineOptions = ref([
-  {
-    year: "2000",
-    title: "I was born",
-    body: "I was born and could build a PC with closed eyes (starting from 7 yeard old).",
-  },
-  {
-    year: "2021 Spring-Summer",
-    title: "Goglobal",
-    site: "https://goglobal.world/",
-    stack: [
-      "Vue.js 3",
-      "HTML5, CSS3 (SASS)",
-      "JavaScript (ES6+)",
-      "REST API",
-      "Git, GitHub",
-    ],
-  },
-  {
-    year: "2022-2024",
-    title: 'PJSC "Rosseti Moscow region"',
-    subtitle:
-      "Managed staff, wrote macros in VBA to automate business-process, organized the work.",
-    site: "https://rossetimr.ru/",
-  },
-  {
-    year: "2024",
-    title: "I'm doing this site",
-    body: "and dream of creating my own product that will make the world a little better (or not a little).",
-  },
-]);
-</script>
 
 <style scoped>
 #title {

@@ -1,3 +1,45 @@
+<script setup lang="ts">
+const themeType = ref<boolean>(false);
+
+onMounted(() => {
+  themeType.value = useColorMode().preference === "dark" ? true : false;
+});
+
+watch(themeType, (newThemeType) => {
+  useColorMode().preference = newThemeType ? "dark" : "light";
+});
+
+const items = ref([
+  {
+    label: "Home",
+    icon: "pi pi-home",
+    to: "/",
+  },
+  {
+    label: "Skills",
+    icon: "pi pi-star",
+    to: "/skills",
+  },
+  {
+    label: "Projects",
+    icon: "pi pi-search",
+    items: [
+      {
+        label: "All projects",
+        icon: "pi pi-bolt",
+        badge: 5,
+        to: "/projects",
+      },
+    ],
+  },
+  {
+    label: "Contact",
+    icon: "pi pi-envelope",
+    to: "/contacts",
+  },
+]);
+</script>
+
 <template>
   <Menubar :model="items">
     <template #start>
@@ -41,45 +83,3 @@
     </template>
   </Menubar>
 </template>
-
-<script setup lang="ts">
-const themeType = ref<boolean>(false);
-
-onMounted(() => {
-  themeType.value = useColorMode().preference === "dark" ? true : false;
-});
-
-watch(themeType, (newThemeType) => {
-  useColorMode().preference = newThemeType ? "dark" : "light";
-});
-
-const items = ref([
-  {
-    label: "Home",
-    icon: "pi pi-home",
-    to: "/",
-  },
-  {
-    label: "Skills",
-    icon: "pi pi-star",
-    to: "/skills",
-  },
-  {
-    label: "Projects",
-    icon: "pi pi-search",
-    items: [
-      {
-        label: "All projects",
-        icon: "pi pi-bolt",
-        badge: 5,
-        to: "/projects",
-      },
-    ],
-  },
-  {
-    label: "Contact",
-    icon: "pi pi-envelope",
-    to: "/contacts",
-  },
-]);
-</script>

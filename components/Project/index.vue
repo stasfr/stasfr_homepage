@@ -1,3 +1,17 @@
+<script setup>
+const props = defineProps({
+  project: {
+    type: Object,
+    required: true,
+  },
+});
+
+const animationType = ref({
+  1: "v-motion-slide-left",
+  0: "v-motion-slide-right",
+});
+</script>
+
 <template>
   <div
     v-motion-slide-top
@@ -21,17 +35,3 @@
     >
   </div>
 </template>
-
-<script setup>
-const props = defineProps({
-  project: {
-    type: Object,
-    required: true,
-  },
-});
-
-const animationType = ref({
-  1: "v-motion-slide-left",
-  0: "v-motion-slide-right",
-});
-</script>

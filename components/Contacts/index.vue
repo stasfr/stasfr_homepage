@@ -1,3 +1,12 @@
+<script setup>
+const props = defineProps({
+  contact: {
+    type: Object,
+    required: true,
+  },
+});
+</script>
+
 <template>
   <div class="flex items-center justify-around space-x-16">
     <div>{{ props.contact.title }}</div>
@@ -8,12 +17,3 @@
     >
   </div>
 </template>
-
-<script setup>
-const props = defineProps({
-  contact: {
-    type: Object,
-    required: true,
-  },
-});
-</script>

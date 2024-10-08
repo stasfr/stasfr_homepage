@@ -1,3 +1,5 @@
+<script setup></script>
+
 <template>
   <div
     class="overflow-hidden flex flex-col min-h-screen transition-colors duration-300"
@@ -14,5 +16,3 @@
     <UIFooterComponent />
   </div>
 </template>
-
-<script setup></script>

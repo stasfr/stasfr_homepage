@@ -1,3 +1,10 @@
+<script setup>
+const contacts = ref([
+  { title: "Telegram", link: "https://t.me/stas_fr", btn: "Message me" },
+  { title: "Github", link: "https://github.com/stasfr", btn: "Follow me" },
+]);
+</script>
+
 <template>
   <section class="flex flex-col space-y-8">
     <h2
@@ -11,10 +18,3 @@
     </div>
   </section>
 </template>
-
-<script setup>
-const contacts = ref([
-  { title: "Telegram", link: "https://t.me/stas_fr", btn: "Message me" },
-  { title: "Github", link: "https://github.com/stasfr", btn: "Follow me" },
-]);
-</script>
