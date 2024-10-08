@@ -1,8 +1,10 @@
+<script setup></script>
+
 <template>
   <div
-    class="overflow-hidden flex flex-col bg-backgroundLight dark:bg-background text-black dark:text-textLight min-h-screen transition-colors duration-300"
+    class="overflow-hidden flex flex-col min-h-screen transition-colors duration-300"
   >
-    <UIHeaderComponent class="z-50" />
+    <UIHeader class="z-50" />
     <UIDogModelComponent
       class="m-auto -mb-[64px] mt-[24px] xs:-mb-[140px] xs:-mt-[10px] md:-mb-[200px] md:-mt-[60px]"
     />
@@ -14,5 +16,3 @@
     <UIFooterComponent />
   </div>
 </template>
-
-<script setup></script>

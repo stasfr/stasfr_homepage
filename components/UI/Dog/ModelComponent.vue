@@ -1,9 +1,3 @@
-<template>
-  <UIDogContainerComponent ref="refContainer">
-    <component :is="loading && SpinnerComponent"></component>
-  </UIDogContainerComponent>
-</template>
-
 <script setup>
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
@@ -122,5 +116,11 @@ onUnmounted(() => {
   window.removeEventListener("resize", handleResize);
 });
 </script>
+
+<template>
+  <UIDogContainerComponent ref="refContainer">
+    <component :is="loading && SpinnerComponent"></component>
+  </UIDogContainerComponent>
+</template>
 
 <style scoped></style>
