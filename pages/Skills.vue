@@ -1,9 +1,7 @@
 <script setup>
-import { resolve } from "chart.js/helpers";
-
 const IconCSS = resolveComponent("UIIconsBrandsCSS");
 const IconExpress = resolveComponent("UIIconsBrandsExpress");
-const IconGitHub = resolveComponent("UIIconsBrandsGitHub");
+const IconGit = resolveComponent("UIIconsBrandsGit");
 const IconGoogle = resolveComponent("UIIconsBrandsGoogle");
 const IconGraphQL = resolveComponent("UIIconsBrandsGraphQL");
 const IconHTML = resolveComponent("UIIconsBrandsHTML");
@@ -25,7 +23,7 @@ const IconFigma = resolveComponent("UIIconsBrandsFigma");
 const icons = [
   { icon: IconCSS, title: "CSS" },
   { icon: IconExpress, title: "Express" },
-  { icon: IconGitHub, title: "GitHub" },
+  { icon: IconGit, title: "Git" },
   { icon: IconGoogle, title: "Google" },
   { icon: IconGraphQL, title: "GraphQL" },
   { icon: IconHTML, title: "HTML" },
