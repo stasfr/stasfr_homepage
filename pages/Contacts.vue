@@ -1,8 +1,21 @@
 <script setup>
-const contacts = ref([
-  { title: "Telegram", link: "https://t.me/stas_fr", btn: "Message me" },
-  { title: "Github", link: "https://github.com/stasfr", btn: "Follow me" },
-]);
+const telegramContacts = ref({
+  title: "Telegram",
+  link: "https://t.me/stas_fr",
+  buttonTitle: "Message me",
+});
+
+const githubContacts = ref({
+  title: "Github",
+  link: "https://github.com/stasfr",
+  buttonTitle: "Follow me",
+});
+
+const emailContacts = ref({
+  title: "Yandex",
+  link: "mailto:sfworking@yandex.ru",
+  buttonTitle: "Email me",
+});
 </script>
 
 <template>
@@ -11,10 +24,27 @@ const contacts = ref([
       v-motion-slide-top
       class="block text-3xl text-center underline decoration-border decoration-4 underline-offset-8"
     >
-      In touch
+      Let's talk
     </h2>
-    <div class="space-y-4" v-motion-slide-top>
-      <Contacts v-for="contact in contacts" :contact="contact" />
+
+    <div class="grid grid-cols-2 gap-6 items-center" v-motion-slide-bottom>
+      <Contact
+        :title="telegramContacts.title"
+        :link="telegramContacts.link"
+        :buttonTitle="telegramContacts.buttonTitle"
+      />
+
+      <Contact
+        :title="githubContacts.title"
+        :link="githubContacts.link"
+        :buttonTitle="githubContacts.buttonTitle"
+      />
+
+      <Contact
+        :title="emailContacts.title"
+        :link="emailContacts.link"
+        :buttonTitle="emailContacts.buttonTitle"
+      />
     </div>
   </section>
 </template>
