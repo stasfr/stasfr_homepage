@@ -1,4 +1,6 @@
 <script setup>
+import { resolve } from "chart.js/helpers";
+
 const IconCSS = resolveComponent("UIIconsBrandsCSS");
 const IconExpress = resolveComponent("UIIconsBrandsExpress");
 const IconGitHub = resolveComponent("UIIconsBrandsGitHub");
@@ -15,6 +17,10 @@ const IconSASS = resolveComponent("UIIconsBrandsSASS");
 const IconTailwind = resolveComponent("UIIconsBrandsTailwind");
 const IconTS = resolveComponent("UIIconsBrandsTS");
 const IconVue = resolveComponent("UIIconsBrandsVue");
+const IconChartJS = resolveComponent("UIIconsBrandsChartJS");
+const IconDocker = resolveComponent("UIIconsBrandsDocker");
+const IconSupabase = resolveComponent("UIIconsBrandsSupabase");
+const IconFigma = resolveComponent("UIIconsBrandsFigma");
 
 const icons = [
   { icon: IconCSS, title: "CSS" },
@@ -33,6 +39,10 @@ const icons = [
   { icon: IconTailwind, title: "Tailwind" },
   { icon: IconTS, title: "TS" },
   { icon: IconVue, title: "Vue" },
+  { icon: IconChartJS, title: "Chart.js" },
+  { icon: IconDocker, title: "Docker" },
+  { icon: IconSupabase, title: "Supabase" },
+  { icon: IconFigma, title: "Figma" },
 ];
 </script>
 
@@ -44,6 +54,7 @@ const icons = [
     >
       My skills
     </h2>
+
     <div class="grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 gap-6 grid">
       <UIIconsIconBrand
         v-for="icon in icons"
