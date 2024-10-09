@@ -2,7 +2,7 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { loadGLTFModel } from "../lib/model";
-import SpinnerComponent from "../Dog/SpinnerComponent.vue";
+import Spinner from "./Spinner.vue";
 
 const refContainer = ref();
 const refRenderer = ref();
@@ -52,7 +52,7 @@ onMounted(() => {
       20 * Math.cos(0.2 * Math.PI)
     );
 
-    const scale = scH * 0.005 + 4.8;
+    const scale = scH * 0.005 + 3;
 
     const camera = new THREE.OrthographicCamera(
       -scale,
@@ -104,7 +104,6 @@ onMounted(() => {
     };
   }
 });
-
 onMounted(() => {
   initialWidth = refContainer.value?.clientWidth || 0;
   initialHeight = refContainer.value?.clientHeight || 0;
@@ -118,9 +117,9 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <UIDogContainerComponent ref="refContainer">
-    <component :is="loading && SpinnerComponent"></component>
-  </UIDogContainerComponent>
+  <UIDogContainer ref="refContainer">
+    <component :is="loading && Spinner"></component>
+  </UIDogContainer>
 </template>
 
 <style scoped></style>
