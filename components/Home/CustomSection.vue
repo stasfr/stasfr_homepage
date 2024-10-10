@@ -25,11 +25,7 @@ const props = defineProps({
 
 <template>
   <section class="space-y-6 text-center">
-    <h2
-      class="text-3xl text-left underline decoration-border decoration-4 underline-offset-8"
-    >
-      {{ props.title }}
-    </h2>
+    <UISectionTitle :title="props.title" />
 
     <p v-if="props.text" class="text-justify">
       {{ props.text }}

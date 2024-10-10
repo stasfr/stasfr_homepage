@@ -9,6 +9,8 @@ const props = defineProps({
 
 <template>
   <section class="space-y-8 flex flex-col items-center">
+    <UISectionTitle title="My lifetime" />
+
     <Timeline
       :value="props.timelineOptions"
       pt:eventopposite:class="!flex-none"
