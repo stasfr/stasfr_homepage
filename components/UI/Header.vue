@@ -27,7 +27,7 @@ const items = ref([
       {
         label: "All projects",
         icon: "pi pi-bolt",
-        badge: 5,
+        badge: 7,
         to: "/projects",
       },
     ],
