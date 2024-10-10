@@ -20,12 +20,7 @@ const emailContacts = ref({
 
 <template>
   <section class="flex flex-col space-y-8">
-    <h2
-      v-motion-slide-top
-      class="block text-3xl text-center underline decoration-border decoration-4 underline-offset-8"
-    >
-      Let's talk
-    </h2>
+    <UISectionTitle title="Let's talk" class="text-center" />
 
     <div class="grid grid-cols-2 gap-6 items-center" v-motion-slide-bottom>
       <Contact

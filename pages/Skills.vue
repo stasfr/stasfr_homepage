@@ -54,12 +54,7 @@ onMounted(() => {
 
 <template>
   <section class="flex flex-col space-y-8 items-center">
-    <h2
-      v-motion-slide-top
-      class="block text-3xl text-center underline decoration-border decoration-4 underline-offset-8"
-    >
-      My skills
-    </h2>
+    <UISectionTitle title="My skills" />
 
     <div class="grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 gap-6 grid">
       <UIIconsIconBrand

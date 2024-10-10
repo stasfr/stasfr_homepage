@@ -54,12 +54,7 @@ const projects = ref([
 
 <template>
   <section class="flex flex-col space-y-8">
-    <h2
-      v-motion-slide-top
-      class="block text-3xl text-center underline decoration-border decoration-4 underline-offset-8"
-    >
-      My projects
-    </h2>
+    <UISectionTitle title="My projects" class="text-center" />
 
     <div class="grid md:grid-cols-2 grid-cols-1 gap-8">
       <Project v-for="(project, index) in projects" :project="project" />
