@@ -27,35 +27,39 @@ const items = ref([
     icon: "pi pi-hammer",
     items: [
       {
+        label: "Landings",
+        icon: "pi pi-users",
+        badge: projectsStore.landingProjectsCount,
+        severity: projectsStore.categoreis.landing.bageSeverity,
+        to: "/projects/landing",
+      },
+      {
+        label: "Pet projects",
+        icon: "pi pi-lightbulb",
+        badge: projectsStore.petProjectsCount,
+        severity: projectsStore.categoreis.pet.bageSeverity,
+        to: "/projects/pet",
+      },
+      {
+        label: "Commercial",
+        icon: "pi pi-shopping-bag",
+        badge: projectsStore.commercialProjectsCount,
+        severity: projectsStore.categoreis.commercial.bageSeverity,
+        to: "/projects/commercial",
+      },
+      {
+        label: "Test tasks",
+        icon: "pi pi-list-check",
+        badge: projectsStore.testProjectsCount,
+        severity: projectsStore.categoreis.test.bageSeverity,
+        to: "/projects/test",
+      },
+      {
         label: "All projects",
+        icon: "pi pi-hammer",
+        severity: "secondary",
         badge: projectsStore.projectsCount,
         to: "/projects",
-        items: [
-          {
-            label: "Landings",
-            icon: "pi pi-users",
-            badge: projectsStore.landingPagesCount,
-            to: "/projects/landings",
-          },
-          {
-            label: "Pet projects",
-            icon: "pi pi-lightbulb",
-            badge: projectsStore.petProjectsCount,
-            to: "/projects/pet_projects",
-          },
-          {
-            label: "Commercial",
-            icon: "pi pi-shopping-bag",
-            badge: projectsStore.commercialProjectsCount,
-            to: "/projects/commercial_projects",
-          },
-          {
-            label: "Tests",
-            icon: "pi pi-list-check",
-            badge: projectsStore.testProjectsCount,
-            to: "/projects/tests",
-          },
-        ],
       },
     ],
   },
@@ -85,6 +89,7 @@ const items = ref([
           v-if="item.badge"
           :class="{ 'ml-auto': !root, 'ml-2': root }"
           :value="item.badge"
+          :severity="item.severity"
         />
         <span
           v-if="item.shortcut"

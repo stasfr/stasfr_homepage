@@ -8,7 +8,7 @@ export default function useProjects() {
       img: "/img/projects/saviour_care.png",
       description: "Adaptive landing with custom burger menu",
       stack: "Vanilla HTML, CSS",
-      category: "Landing page",
+      category: "landing",
     },
     {
       title: "Wine and Dices",
@@ -16,7 +16,7 @@ export default function useProjects() {
       img: "/img/projects/wad.png",
       description: "Dream project about Wine and Dice Throne",
       stack: "Vue3, Supabase",
-      category: "Pet project",
+      category: "pet",
     },
     {
       title: "Goglobal",
@@ -24,7 +24,7 @@ export default function useProjects() {
       img: "/img/projects/goglobal.png",
       description: "Vue3.js SPA, made little components",
       stack: "Vue3, JS",
-      category: "Commercial project",
+      category: "commercial",
     },
     {
       title: "Alef test",
@@ -32,7 +32,7 @@ export default function useProjects() {
       img: "/img/projects/alef_test.png",
       description: "Test project for job interview",
       stack: "Nuxt, TypeScript, Custom form componetns",
-      category: "Test project",
+      category: "test",
     },
     {
       title: "Todo App",
@@ -40,7 +40,7 @@ export default function useProjects() {
       img: "/img/projects/todo_app.png",
       description: "Test project for job interview",
       stack: "Vue 3, TypeScript, AutoImports, Tailwind",
-      category: "Test project",
+      category: "test",
     },
     {
       title: "Crypto app",
@@ -48,7 +48,7 @@ export default function useProjects() {
       img: "/img/projects/crypto_app.png",
       description: "Test project for job interview",
       stack: "Nuxt, TypeScript, Primevue, Chart.js, Docker",
-      category: "Test project",
+      category: "test",
     },
     {
       title: "Crypto app backend",
@@ -56,31 +56,32 @@ export default function useProjects() {
       img: "/img/projects/nestjs_logo.png",
       description: "Backend on Nest.js for Crypto app",
       stack: "Nest, TypeScript, Prisma, Axios, JWT",
-      category: "Test project",
+      category: "test",
     },
   ]);
 
+  const categoreis = {
+    landing: { bageSeverity: "contrast", title: "My landing pages" },
+    pet: { bageSeverity: "warn", title: "My pet projects" },
+    commercial: { bageSeverity: "success", title: "My commercial projects" },
+    test: { bageSeverity: "info", title: "My test tasks for jobs" },
+  };
+
   const projectsCount = computed(() => projects.value.length);
-  const landingPagesCount = computed(
+  const landingProjectsCount = computed(
     () =>
-      projects.value.filter((project) => project.category === "Landing page")
-        .length
+      projects.value.filter((project) => project.category === "landing").length
   );
   const petProjectsCount = computed(
-    () =>
-      projects.value.filter((project) => project.category === "Pet project")
-        .length
+    () => projects.value.filter((project) => project.category === "pet").length
   );
   const commercialProjectsCount = computed(
     () =>
-      projects.value.filter(
-        (project) => project.category === "Commercial project"
-      ).length
+      projects.value.filter((project) => project.category === "commercial")
+        .length
   );
   const testProjectsCount = computed(
-    () =>
-      projects.value.filter((project) => project.category === "Test project")
-        .length
+    () => projects.value.filter((project) => project.category === "test").length
   );
 
   function getProjectsByCategory(category: string) {
@@ -89,8 +90,9 @@ export default function useProjects() {
 
   return {
     projects,
+    categoreis,
     projectsCount,
-    landingPagesCount,
+    landingProjectsCount,
     petProjectsCount,
     commercialProjectsCount,
     testProjectsCount,

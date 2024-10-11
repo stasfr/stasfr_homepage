@@ -11,6 +11,6 @@
     >
       <slot />
     </main>
-    <UIFooterComponent />
+    <UIFooter />
   </div>
 </template>
