@@ -5,7 +5,7 @@ const props = defineProps({
     required: true,
   },
   text: {
-    type: String,
+    type: Array,
     required: true,
   },
   link: {
@@ -24,19 +24,27 @@ const props = defineProps({
 </script>
 
 <template>
-  <section class="space-y-6 text-center">
-    <UISectionTitle :title="props.title" />
+  <section class="text-center">
+    <Card>
+      <template #title>
+        <UISectionTitle :title="props.title" />
+      </template>
 
-    <p v-if="props.text" class="text-justify">
-      {{ props.text }}
-    </p>
+      <template #content>
+        <p v-for="text in props.text" class="text-justify indent-8 mb-4">
+          {{ text }}
+        </p>
+      </template>
 
-    <Button
-      v-if="props.link"
-      as="router-link"
-      :to="props.link"
-      :icon="props.buttonIcon"
-      :label="props.buttonTitle"
-    />
+      <template #footer>
+        <Button
+          v-if="props.link"
+          as="router-link"
+          :to="props.link"
+          :icon="props.buttonIcon"
+          :label="props.buttonTitle"
+        />
+      </template>
+    </Card>
   </section>
 </template>
