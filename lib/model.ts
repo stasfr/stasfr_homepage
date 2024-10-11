@@ -1,3 +1,4 @@
+import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 
@@ -7,8 +8,8 @@ draco.setDecoderConfig({ type: "js" });
 draco.setDecoderPath("https://www.gstatic.com/draco/v1/decoders/");
 
 export function loadGLTFModel(
-  scene,
-  glbPath,
+  scene: THREE.Scene,
+  glbPath: string,
   options = { receiveShadow: true, castShadow: true }
 ) {
   const { receiveShadow, castShadow } = options;
@@ -34,6 +35,7 @@ export function loadGLTFModel(
             child.receiveShadow = receiveShadow;
           }
         });
+        console.log(obj);
 
         resolve(obj);
       },
