@@ -13,7 +13,6 @@
     "@nuxt/image": "^1.8.0",
     "@nuxtjs/color-mode": "^3.4.4",
     "@nuxtjs/tailwindcss": "^6.12.1",
-    "@pinia/nuxt": "^0.5.4",
     "@primevue/themes": "^4.0.7",
     "@vueuse/motion": "^2.2.5",
     "chart.js": "^4.4.4",
@@ -24,7 +23,6 @@
     "vue": "latest"
   },
   "devDependencies": {
-    "@primevue/nuxt-module": "^4.0.7",
-    "daisyui": "^4.12.10"
+    "@primevue/nuxt-module": "^4.0.7"
   }
 }
