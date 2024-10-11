@@ -9,6 +9,8 @@ watch(themeType, (newThemeType) => {
   useColorMode().preference = newThemeType ? "dark" : "light";
 });
 
+const projectsStore = useProjects();
+
 const items = ref([
   {
     label: "Home",
@@ -22,13 +24,38 @@ const items = ref([
   },
   {
     label: "Projects",
-    icon: "pi pi-search",
+    icon: "pi pi-hammer",
     items: [
       {
         label: "All projects",
-        icon: "pi pi-bolt",
-        badge: 7,
+        badge: projectsStore.projectsCount,
         to: "/projects",
+        items: [
+          {
+            label: "Landings",
+            icon: "pi pi-users",
+            badge: projectsStore.landingPagesCount,
+            to: "/projects/landings",
+          },
+          {
+            label: "Pet projects",
+            icon: "pi pi-lightbulb",
+            badge: projectsStore.petProjectsCount,
+            to: "/projects/pet_projects",
+          },
+          {
+            label: "Commercial",
+            icon: "pi pi-shopping-bag",
+            badge: projectsStore.commercialProjectsCount,
+            to: "/projects/commercial_projects",
+          },
+          {
+            label: "Tests",
+            icon: "pi pi-list-check",
+            badge: projectsStore.testProjectsCount,
+            to: "/projects/tests",
+          },
+        ],
       },
     ],
   },

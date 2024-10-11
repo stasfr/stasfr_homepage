@@ -66,7 +66,7 @@ const props = defineProps({
       <template #footer>
         <Button
           label="My Projects"
-          icon="pi pi-bolt"
+          icon="pi pi-hammer"
           as="router-link"
           to="/projects"
         />
