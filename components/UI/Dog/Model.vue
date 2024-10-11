@@ -1,7 +1,7 @@
-<script setup>
+<script setup lang="ts">
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { loadGLTFModel } from "../lib/model";
+import { loadGLTFModel } from "@/lib/model";
 import Spinner from "./Spinner.vue";
 
 const refContainer = ref();
@@ -10,7 +10,7 @@ const loading = ref(true);
 
 const urlDogGLB = new URL("/public/dog.glb", import.meta.url).href;
 
-function easeOutCirc(x) {
+function easeOutCirc(x: number) {
   return Math.sqrt(1 - Math.pow(x - 1, 4));
 }
 
@@ -40,7 +40,6 @@ onMounted(() => {
 
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(scW, scH);
-    renderer.outputEncoding = THREE.sRGBEncoding;
     refContainer.value.appendChild(renderer.domElement);
     refRenderer.value = renderer;
 

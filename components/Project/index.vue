@@ -1,10 +1,10 @@
-<script setup>
-const props = defineProps({
-  project: {
-    type: Object,
-    required: true,
-  },
-});
+<script setup lang="ts">
+import type { Project } from "@/types/project";
+interface Props {
+  project: Project;
+}
+
+const props = defineProps<Props>();
 </script>
 
 <template>
