@@ -1,17 +1,19 @@
-<script setup>
-const telegramContacts = ref({
+<script setup lang="ts">
+import type { Contact } from "@/types/contact";
+
+const telegramContacts = ref<Contact>({
   title: "Telegram",
   link: "https://t.me/stas_fr",
   buttonTitle: "Message me",
 });
 
-const githubContacts = ref({
+const githubContacts = ref<Contact>({
   title: "Github",
   link: "https://github.com/stasfr",
   buttonTitle: "Follow me",
 });
 
-const emailContacts = ref({
+const emailContacts = ref<Contact>({
   title: "Yandex",
   link: "mailto:sfworking@yandex.ru",
   buttonTitle: "Email me",

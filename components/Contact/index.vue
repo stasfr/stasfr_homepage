@@ -1,18 +1,11 @@
-<script setup>
-const props = defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-  link: {
-    type: String,
-    required: true,
-  },
-  buttonTitle: {
-    type: String,
-    required: true,
-  },
-});
+<script setup lang="ts">
+interface Props {
+  title: string;
+  link: string;
+  buttonTitle: string;
+}
+
+const props = defineProps<Props>();
 </script>
 
 <template>

@@ -1,10 +1,10 @@
-<script setup>
-const props = defineProps({
-  timelineOptions: {
-    type: Object,
-    required: true,
-  },
-});
+<script setup lang="ts">
+import type { TimelineStamp } from "@/types/timeline";
+interface Props {
+  timelineOptions: TimelineStamp[];
+}
+
+const props = defineProps<Props>();
 </script>
 
 <template>
