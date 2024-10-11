@@ -22,14 +22,14 @@ const props = defineProps({
         >
           <template #marker="slotProps">
             <span
-              class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm"
+              class="flex w-8 h-8 items-center justify-center rounded-full z-10 shadow-sm"
             >
               <i class="pi pi-check-circle"></i>
             </span>
           </template>
 
           <template #content="slotProps">
-            <Card class="mb-4 !bg-zinc-800">
+            <Card class="mb-4 dark:border-zinc-800 border-[1px]">
               <template #title>
                 <p class="text-base italic font-normal mb-2">
                   {{ slotProps.item.year }}

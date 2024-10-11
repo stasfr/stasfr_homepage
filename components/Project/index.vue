@@ -13,7 +13,7 @@ const animationType = ref({
 </script>
 
 <template>
-  <Card>
+  <Card class="dark:border-zinc-800 border-[1px]">
     <template #title>{{ props.project.title }}</template>
 
     <template #subtitle>{{ props.project.description }}</template>
