@@ -1,46 +1,25 @@
-<script setup>
-const IconCSS = resolveComponent("UIIconsBrandsCSS");
-const IconExpress = resolveComponent("UIIconsBrandsExpress");
-const IconGit = resolveComponent("UIIconsBrandsGit");
-const IconGoogle = resolveComponent("UIIconsBrandsGoogle");
-const IconGraphQL = resolveComponent("UIIconsBrandsGraphQL");
-const IconHTML = resolveComponent("UIIconsBrandsHTML");
-const IconJS = resolveComponent("UIIconsBrandsJS");
-const IconNode = resolveComponent("UIIconsBrandsNode");
-const IconNPM = resolveComponent("UIIconsBrandsNPM");
-const IconNuxt = resolveComponent("UIIconsBrandsNuxt");
-const IconPostgreSQL = resolveComponent("UIIconsBrandsPostgreSQL");
-const IconPostman = resolveComponent("UIIconsBrandsPostman");
-const IconSASS = resolveComponent("UIIconsBrandsSASS");
-const IconTailwind = resolveComponent("UIIconsBrandsTailwind");
-const IconTS = resolveComponent("UIIconsBrandsTS");
-const IconVue = resolveComponent("UIIconsBrandsVue");
-const IconChartJS = resolveComponent("UIIconsBrandsChartJS");
-const IconDocker = resolveComponent("UIIconsBrandsDocker");
-const IconSupabase = resolveComponent("UIIconsBrandsSupabase");
-const IconFigma = resolveComponent("UIIconsBrandsFigma");
-
-const icons = ref([
-  { icon: shallowRef(IconCSS), title: "CSS" },
-  { icon: shallowRef(IconExpress), title: "Express" },
-  { icon: shallowRef(IconGit), title: "Git" },
-  { icon: shallowRef(IconGoogle), title: "Google" },
-  { icon: shallowRef(IconGraphQL), title: "GraphQL" },
-  { icon: shallowRef(IconHTML), title: "HTML" },
-  { icon: shallowRef(IconJS), title: "JS" },
-  { icon: shallowRef(IconNode), title: "Node.js" },
-  { icon: shallowRef(IconNPM), title: "NPM" },
-  { icon: shallowRef(IconNuxt), title: "Nuxt" },
-  { icon: shallowRef(IconPostgreSQL), title: "PostgreSQL" },
-  { icon: shallowRef(IconPostman), title: "Postman" },
-  { icon: shallowRef(IconSASS), title: "SASS" },
-  { icon: shallowRef(IconTailwind), title: "Tailwind" },
-  { icon: shallowRef(IconTS), title: "TS" },
-  { icon: shallowRef(IconVue), title: "Vue" },
-  { icon: shallowRef(IconChartJS), title: "Chart.js" },
-  { icon: shallowRef(IconDocker), title: "Docker" },
-  { icon: shallowRef(IconSupabase), title: "Supabase" },
-  { icon: shallowRef(IconFigma), title: "Figma" },
+<script setup lang="ts">
+const icons = ref<{ name: string; title: string }[]>([
+  { name: "flowbite:css-solid", title: "CSS" },
+  { name: "simple-icons:express", title: "Express" },
+  { name: "bi:git", title: "Git" },
+  { name: "akar-icons:google-fill", title: "Google" },
+  { name: "akar-icons:graphql-fill", title: "GraphQL" },
+  { name: "flowbite:html-solid", title: "HTML" },
+  { name: "akar-icons:javascript-fill", title: "JS" },
+  { name: "akar-icons:node-fill", title: "Node.js" },
+  { name: "akar-icons:npm-fill", title: "NPM" },
+  { name: "simple-icons:nuxtdotjs", title: "Nuxt" },
+  { name: "akar-icons:postgresql-fill", title: "PostgreSQL" },
+  { name: "simple-icons:postman", title: "Postman" },
+  { name: "akar-icons:sass-fill", title: "SASS" },
+  { name: "flowbite:tailwind-solid", title: "Tailwind" },
+  { name: "akar-icons:typescript-fill", title: "TS" },
+  { name: "akar-icons:vue-fill", title: "Vue" },
+  { name: "file-icons:chartjs", title: "Chart.js" },
+  { name: "ant-design:docker-outlined", title: "Docker" },
+  { name: "ri:supabase-fill", title: "Supabase" },
+  { name: "akar-icons:figma-fill", title: "Figma" },
 ]);
 
 const shuffleSkills = () => {
@@ -57,13 +36,16 @@ onMounted(() => {
     <UISectionTitle title="My skills" />
 
     <div class="grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 gap-6 grid">
-      <UIIconsIconBrand
-        v-for="icon in icons"
-        :icon="icon.icon"
-        :title="icon.title"
-        key="icon.title"
+      <Button
+        v-motion-pop-visible
         :delay="Math.floor(Math.random() * 2) * 100"
-      />
+        class="flex flex-col size-24"
+        v-for="icon in icons"
+        key="icon.title"
+      >
+        <Icon :name="icon.name" class="size-12" />
+        <p>{{ icon.title }}</p>
+      </Button>
     </div>
   </section>
 </template>
