@@ -13,7 +13,7 @@ const animationType = ref({
 </script>
 
 <template>
-  <Card v-motion-slide-top :delay="Math.floor(Math.random() * 3) * 100">
+  <Card>
     <template #title>{{ props.project.title }}</template>
 
     <template #subtitle>{{ props.project.description }}</template>

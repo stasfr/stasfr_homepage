@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { projects } = useProjects();
+const { projects, categoreis } = useProjects();
 </script>
 
 <template>
@@ -7,7 +7,14 @@ const { projects } = useProjects();
     <UISectionTitle title="My projects" class="text-center" />
 
     <div class="grid md:grid-cols-2 grid-cols-1 gap-8">
-      <Project v-for="(project, index) in projects" :project="project" />
+      <OverlayBadge
+        :severity="categoreis[project.category].bageSeverity"
+        v-for="project in projects"
+        v-motion-slide-top
+        :delay="Math.floor(Math.random() * 3) * 100"
+      >
+        <Project :project="project" />
+      </OverlayBadge>
     </div>
   </section>
 </template>
