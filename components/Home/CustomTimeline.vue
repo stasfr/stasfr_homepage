@@ -18,6 +18,7 @@ const props = defineProps({
         <Timeline
           :value="props.timelineOptions"
           pt:eventopposite:class="!flex-none"
+          class="my-4"
         >
           <template #marker="slotProps">
             <span
@@ -28,7 +29,7 @@ const props = defineProps({
           </template>
 
           <template #content="slotProps">
-            <Card class="mt-4 !bg-zinc-800">
+            <Card class="mb-4 !bg-zinc-800">
               <template #title>
                 <p class="text-base italic font-normal mb-2">
                   {{ slotProps.item.year }}
@@ -68,7 +69,6 @@ const props = defineProps({
           icon="pi pi-bolt"
           as="router-link"
           to="/projects"
-          class="mt-4"
         />
       </template>
     </Card>

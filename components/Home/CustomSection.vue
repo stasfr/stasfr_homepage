@@ -31,7 +31,7 @@ const props = defineProps({
       </template>
 
       <template #content>
-        <p v-for="text in props.text" class="text-justify indent-8 mb-4">
+        <p v-for="text in props.text" class="text-justify indent-8 my-4">
           {{ text }}
         </p>
       </template>
