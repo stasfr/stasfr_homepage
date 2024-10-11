@@ -9,7 +9,7 @@ const props = defineProps({
 
 <template>
   <section class="space-y-8 flex flex-col items-center">
-    <UISectionTitle title="My lifetime" />
+    <UISectionTitle title="My lifetime" class="self-start" />
 
     <Timeline
       :value="props.timelineOptions"
