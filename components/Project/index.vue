@@ -5,11 +5,6 @@ const props = defineProps({
     required: true,
   },
 });
-
-const animationType = ref({
-  1: "v-motion-slide-left",
-  0: "v-motion-slide-right",
-});
 </script>
 
 <template>

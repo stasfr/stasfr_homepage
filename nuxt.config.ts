@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@vueuse/motion/nuxt",
     "@nuxtjs/color-mode",
     "@primevue/nuxt-module",
+    "@nuxt/icon",
   ],
   colorMode: {
     preference: "dark",
