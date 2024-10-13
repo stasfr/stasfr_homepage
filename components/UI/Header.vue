@@ -27,6 +27,13 @@ const items = ref([
     icon: "pi pi-hammer",
     items: [
       {
+        label: "All projects",
+        icon: "pi pi-hammer",
+        severity: "secondary",
+        badge: projectsStore.projectsCount,
+        to: "/projects",
+      },
+      {
         label: "Landings",
         icon: "pi pi-users",
         badge: projectsStore.landingProjectsCount,
@@ -53,13 +60,6 @@ const items = ref([
         badge: projectsStore.testProjectsCount,
         severity: projectsStore.categoreis.test.bageSeverity,
         to: "/projects/test",
-      },
-      {
-        label: "All projects",
-        icon: "pi pi-hammer",
-        severity: "secondary",
-        badge: projectsStore.projectsCount,
-        to: "/projects",
       },
     ],
   },

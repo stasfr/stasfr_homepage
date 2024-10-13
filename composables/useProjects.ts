@@ -5,7 +5,7 @@ export default function useProjects() {
     {
       title: "Saviour Care",
       link: "https://stasfr.github.io/Saviour-Care/",
-      img: "/img/projects/saviour_care.png",
+      img: "/img/projects/saviour_care.webp",
       description: "Adaptive landing with custom burger menu",
       stack: "Vanilla HTML, CSS",
       category: "landing",
@@ -13,7 +13,7 @@ export default function useProjects() {
     {
       title: "Wine and Dices",
       link: "https://github.com/stasfr/wad-reborn",
-      img: "/img/projects/wad.png",
+      img: "/img/projects/wad.webp",
       description: "Dream project about Wine and Dice Throne",
       stack: "Vue3, Supabase",
       category: "pet",
@@ -21,7 +21,7 @@ export default function useProjects() {
     {
       title: "Goglobal",
       link: "https://goglobal.world/",
-      img: "/img/projects/goglobal.png",
+      img: "/img/projects/goglobal.webp",
       description: "Vue3.js SPA, made little components",
       stack: "Vue3, JS",
       category: "commercial",
@@ -29,7 +29,7 @@ export default function useProjects() {
     {
       title: "Alef test",
       link: "https://github.com/stasfr/alef-test",
-      img: "/img/projects/alef_test.png",
+      img: "/img/projects/alef_test.webp",
       description: "Test project for job interview",
       stack: "Nuxt, TypeScript, Custom form componetns",
       category: "test",
@@ -37,7 +37,7 @@ export default function useProjects() {
     {
       title: "Todo App",
       link: "https://github.com/stasfr/todo_app_test",
-      img: "/img/projects/todo_app.png",
+      img: "/img/projects/todo_app.webp",
       description: "Test project for job interview",
       stack: "Vue 3, TypeScript, AutoImports, Tailwind",
       category: "test",
@@ -45,7 +45,7 @@ export default function useProjects() {
     {
       title: "Crypto app",
       link: "https://github.com/stasfr/crypto-app",
-      img: "/img/projects/crypto_app.png",
+      img: "/img/projects/crypto_app.webp",
       description: "Test project for job interview",
       stack: "Nuxt, TypeScript, Primevue, Chart.js, Docker",
       category: "test",
@@ -53,7 +53,7 @@ export default function useProjects() {
     {
       title: "Crypto app backend",
       link: "https://github.com/stasfr/crypto-app_backend",
-      img: "/img/projects/nestjs_logo.png",
+      img: "/img/projects/nestjs_logo.webp",
       description: "Backend on Nest.js for Crypto app",
       stack: "Nest, TypeScript, Prisma, Axios, JWT",
       category: "test",
