@@ -16,14 +16,6 @@ const timelineOptions = ref<TimelineStamp[]>([
       "and could build a PC with closed eyes (starting from 7 yeard old).",
   },
   {
-    year: "2021 Spring-Summer",
-    title: "Goglobal World",
-    subtitle:
-      "Platform connecting investors and startups globally through AI-powered matchmaking and events.",
-    site: "https://goglobal.world/",
-    stack: ["Vue.js 3", "JavaScript", "GitHub"],
-  },
-  {
     year: "2022-2024",
     title: 'PJSC "Rosseti Moscow region"',
     subtitle:
@@ -32,19 +24,19 @@ const timelineOptions = ref<TimelineStamp[]>([
     stack: ["VBA"],
   },
   {
+    year: "May 2024 - ...",
+    title: 'Insurance office "Pari"',
+    subtitle:
+      "Offers a wide range of insurance products for individuals and businesses, including property, health, and auto insurance, as well as liability coverage and cargo insurance.",
+    site: "https://skpari.ru/",
+    stack: ["Vue.js 3", "Vuetify", "GitLab", "TypeScript"],
+  },
+  {
     year: "2024 September",
     title: "I'm doing this site",
     subtitle:
       "and dream of creating my own product that will make the world a little better (or not a little).",
     stack: ["Nuxt 3", "TypeScript", "Primevue", "Tailwind", "GitHub"],
-  },
-  {
-    year: "October 2024 - ...",
-    title: 'Insurance office "Pari"',
-    subtitle:
-      "Offers a wide range of insurance products for individuals and businesses, including property, health, and auto insurance, as well as liability coverage and cargo insurance.",
-    site: "https://skpari.ru/",
-    stack: ["Vue.js 2/3", "Vuetify", "GitLab"],
   },
 ]);
 </script>
