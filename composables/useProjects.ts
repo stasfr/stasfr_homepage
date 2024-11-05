@@ -19,11 +19,11 @@ export default function useProjects() {
       category: "pet",
     },
     {
-      title: "Goglobal",
-      link: "https://goglobal.world/",
-      img: "/img/projects/goglobal.webp",
-      description: "Vue3.js SPA, made little components",
-      stack: "Vue3, JS",
+      title: "Pari",
+      link: "https://skpari.ru/",
+      img: "/img/projects/skpari.webp",
+      description: "Vue3.js SPA, made some private pet-projects for company",
+      stack: "Vue3, Vuetify, GitLab, TypeScript",
       category: "commercial",
     },
     {
