@@ -6,7 +6,7 @@ export default function Default() {
   redirect("/home");
 
   return (
-    <div className="container mx-auto space-y-4">
+    <div className="mx-auto max-w-screen-md space-y-4 text-base">
       <Header />
       <Outlet />
     </div>
