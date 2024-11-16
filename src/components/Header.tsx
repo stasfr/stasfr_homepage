@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
+import ThemePicker from "@/components/ThemePicker";
+
 export default function Header() {
   const navBar = [
     {
@@ -34,6 +36,7 @@ export default function Header() {
               <Link to={item.link}>{item.name}</Link>
             </Button>
           ))}
+          <ThemePicker />
         </nav>
       </div>
     </header>
