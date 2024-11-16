@@ -32,7 +32,7 @@ export default function Header() {
 
         <nav>
           {navBar.map((item) => (
-            <Button asChild>
+            <Button asChild key={item.link}>
               <Link to={item.link}>{item.name}</Link>
             </Button>
           ))}
