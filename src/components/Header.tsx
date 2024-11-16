@@ -7,24 +7,24 @@ export default function Header() {
   const navBar = [
     {
       name: "Home",
-      link: "/",
+      link: "../",
     },
     {
       name: "Skills",
-      link: "/skills",
+      link: "../skills",
     },
     {
       name: "Projects",
-      link: "/projects",
+      link: "../projects",
     },
     {
       name: "Contacts",
-      link: "/contacts",
+      link: "../contacts",
     },
   ];
 
   return (
-    <header>
+    <header className="flex items-center justify-between">
       <div>
         <div>
           <Link to={"/"}>stasfr_homepage</Link>
