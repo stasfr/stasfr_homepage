@@ -5,6 +5,7 @@ export type ThemeProviderProps = {
   defaultTheme?: Theme;
   storageKey?: string;
 };
+
 export type ThemeProviderState = {
   theme: Theme;
   setTheme: (theme: Theme) => void;
