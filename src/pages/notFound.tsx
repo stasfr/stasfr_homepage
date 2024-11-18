@@ -15,7 +15,7 @@ export default function NotFound() {
       <p>
         <i>{error instanceof Error && error.message}</i>
         <Button asChild>
-          <Link to={`home`}>Home</Link>
+          <Link to={`/`}>Home</Link>
         </Button>
       </p>
     </>
