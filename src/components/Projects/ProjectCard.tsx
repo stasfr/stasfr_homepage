@@ -28,7 +28,7 @@ export default function ProjectCard(props: Props) {
       </CardContent>
 
       <CardFooter className="flex justify-center">
-        <Button asChild>
+        <Button asChild className="bg-primary-bg text-black hover:bg-primary-bg-hover">
           <a href={props.project.link}>Learn more</a>
         </Button>
       </CardFooter>
