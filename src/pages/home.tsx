@@ -1,5 +1,8 @@
 import { Icon } from "@iconify/react";
 import Avatar from "@/components/Home/Avatar";
+import Article from "@/components/Home/Article";
+
+import HomePageArticles from "@/static/HomePageArticles";
 
 export default function Home() {
   return (
@@ -10,6 +13,10 @@ export default function Home() {
       </div>
 
       <Avatar />
+
+      {HomePageArticles.map((article) => (
+        <Article key={article.id} article={article} />
+      ))}
     </section>
   );
 }
