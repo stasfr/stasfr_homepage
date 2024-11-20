@@ -7,6 +7,10 @@ export default {
 
   theme: {
     extend: {
+      screens: {
+        xs: "480px",
+      },
+
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -14,6 +18,7 @@ export default {
       },
 
       colors: {
+        "primary-bg": "#58c4dc",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
