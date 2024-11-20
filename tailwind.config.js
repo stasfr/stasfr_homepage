@@ -19,6 +19,7 @@ export default {
 
       colors: {
         "primary-bg": "#58c4dc",
+        "primary-bg-hover": "#4396a9",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
