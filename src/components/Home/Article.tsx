@@ -28,7 +28,7 @@ export default function Article(props: Props) {
         </CardContent>
 
         <CardFooter>
-          <Button asChild className="mx-auto">
+          <Button asChild className="bg-primary-bg mx-auto text-black">
             <Link to={props.article.link}>
               <Icon icon={props.article.buttonIcon} className="size-5" />
               {props.article.buttonTitle}
