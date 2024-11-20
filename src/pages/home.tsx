@@ -1,8 +1,11 @@
 import { Icon } from "@iconify/react";
 import Avatar from "@/components/Home/Avatar";
 import Article from "@/components/Home/Article";
+import TodosList from "@/components/Home/Todos/TodosList";
 
 import HomePageArticles from "@/static/HomePageArticles";
+import MyTodos from "@/static/MyTodos";
+
 import type { HomePageArticle } from "@/types/HomePageArticle";
 
 export default function Home() {
@@ -18,6 +21,8 @@ export default function Home() {
       {HomePageArticles.map((article: HomePageArticle) => (
         <Article key={article.id} article={article} />
       ))}
+
+      <TodosList todos={MyTodos} />
     </section>
   );
 }

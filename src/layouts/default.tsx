@@ -8,7 +8,7 @@ export default function Default() {
   return (
     <div className="mx-auto max-w-screen-md space-y-4 text-base">
       <Header />
-      <div className="text-center">Dog model placeholder...</div>
+      {/* <div className="text-center">Dog model placeholder...</div> */}
 
       <main className="pb-8">
         <Outlet />
