@@ -2,7 +2,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 export default function Avatar() {
   return (
-    <div className="xs:px-0 flex items-center justify-center gap-4 px-4">
+    <div className="flex items-center justify-center gap-4 px-4 xs:px-0">
       <div className="w-auto space-y-2">
         <h2 className="text-3xl font-bold sm:text-4xl">Stanislav Farkash</h2>
         <p className="text-left">Moscow, Russia</p>
