@@ -29,16 +29,16 @@ export default function Skills() {
   ];
 
   return (
-    <section className="max-w-screen-xs mx-auto space-y-8 px-4">
-      <h2 className="text-3xl underline decoration-border decoration-2 underline-offset-8">
+    <section className="mx-auto max-w-screen-xs space-y-8 px-4">
+      <h2 className="text-center text-3xl underline decoration-border decoration-2 underline-offset-8">
         My skills
       </h2>
 
-      <div className="xs:grid-cols-3 grid grid-cols-2 justify-items-center gap-6 sm:grid-cols-4">
+      <div className="grid grid-cols-2 justify-items-center gap-6 xs:grid-cols-3 sm:grid-cols-4">
         {skillsIcons.map((icon) => (
           <div
             key={icon.title}
-            className="bg-primary-bg hover:bg-primary-bg-hover flex size-24 cursor-pointer flex-col items-center justify-around gap-2 rounded p-2 text-black transition-colors duration-300 ease-in-out"
+            className="flex size-24 cursor-pointer flex-col items-center justify-around gap-2 rounded bg-primary-bg p-2 text-black transition-colors duration-300 ease-in-out hover:bg-primary-bg-hover"
           >
             <Icon icon={icon.name} className="size-12" />
             <span>{icon.title}</span>
