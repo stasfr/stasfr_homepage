@@ -10,7 +10,7 @@ export default function Default() {
       <Header />
       <div className="text-center">Dog model placeholder...</div>
 
-      <main>
+      <main className="pb-8">
         <Outlet />
       </main>
     </div>
