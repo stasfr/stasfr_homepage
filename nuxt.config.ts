@@ -13,6 +13,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/test-utils',
     '@primevue/nuxt-module',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/i18n',
   ],
   css: ['~/assets/css/main.css'],
   vite: {
