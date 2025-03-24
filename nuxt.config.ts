@@ -24,12 +24,10 @@ export default defineNuxtConfig({
     options: {
       theme: {
         preset: Aura,
-        options: {
-          prefix: 'p',
-          darkModeSelector: 'system',
-          cssLayer: false,
-        },
       },
+    },
+    components: {
+      prefix: 'Prime',
     },
   },
 });
