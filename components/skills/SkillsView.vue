@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const skills = [
+const skills = ref([
   {
     name: 'flowbite:css-solid',
     title: 'CSS',
-    hoverClass: 'hover:text-[#0065f4]',
+    hoverClass: 'hover:text-[#3C99DC]',
   },
   {
     name: 'simple-icons:express',
@@ -102,15 +102,70 @@ const skills = [
     // hoverClass: 'hover:text-[#1abcfe]',
     // hoverClass: 'hover:text-[#0acf83]',
   },
-];
+  {
+    name: 'simple-icons:nestjs',
+    title: 'Nest.js',
+    hoverClass: 'hover:text-[#E0234E]',
+  },
+  {
+    name: 'simple-icons:primevue',
+    title: 'PrimeVue',
+    hoverClass: 'hover:text-[#42b883]',
+  },
+  {
+    name: 'devicon-plain:vuetify',
+    title: 'Vuetify',
+    hoverClass: 'hover:text-[#1697F6]',
+  },
+  {
+    name: 'simple-icons:quasar',
+    title: 'Quasar',
+    hoverClass: 'hover:text-[#00b4ff]',
+  },
+  {
+    name: 'simple-icons:prisma',
+    title: 'Prisma',
+    hoverClass: 'hover:text-[#4c51bf]',
+  },
+  {
+    name: 'simple-icons:mongodb',
+    title: 'MongoDB',
+    hoverClass: 'hover:text-[#00ed64]',
+  },
+  {
+    name: 'simple-icons:gitlab',
+    title: 'GitLab',
+    hoverClass: 'hover:text-[#fc6d27]',
+  },
+  {
+    name: 'simple-icons:vitest',
+    title: 'Vitest',
+    hoverClass: 'hover:text-[#fcc72b]',
+  },
+]);
+
+function shuffleSkills() {
+  const newArray = [...skills.value];
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  skills.value = newArray;
+}
 </script>
 
 <template>
   <section class="flex h-full items-center justify-around">
     <div class="flex flex-col gap-4 p-8 bg-neutral-900 rounded-lg">
-      <h2 class="text-2xl md:text-4xl tracking-widest font-thin">My stack</h2>
+      <div class="flex justify-between items-center">
+        <h2 class="text-2xl md:text-4xl tracking-widest font-thin">My stack</h2>
+        <PrimeButton label="Shuffle" @click="shuffleSkills" />
+      </div>
 
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <TransitionGroup
+        name="list-shuffle"
+        tag="div"
+        class="grid grid-cols-2 sm:grid-cols-4 gap-4">
         <div
           v-for="skill in skills"
           :key="skill.name"
@@ -118,7 +173,13 @@ const skills = [
           :class="[skill.hoverClass]">
           <Icon :name="skill.name" class="!size-12" />
         </div>
-      </div>
+      </TransitionGroup>
     </div>
   </section>
 </template>
+
+<style>
+.list-shuffle-move {
+  transition: transform 0.8s ease;
+}
+</style>
