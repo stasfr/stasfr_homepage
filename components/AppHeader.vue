@@ -56,7 +56,7 @@ const items = ref([
         <Icon name="prime:ellipsis-v" />
       </PrimeButton>
 
-      <PrimeMenu ref="menu" id="overlay_menu" :model="items" :popup="true">
+      <PrimeMenu id="overlay_menu" ref="menu" :model="items" :popup="true">
         <template #item="{ item, props }">
           <router-link v-slot="{ href, navigate }" :to="item.route" custom>
             <a :href="href" v-bind="props.action" @click="navigate">
