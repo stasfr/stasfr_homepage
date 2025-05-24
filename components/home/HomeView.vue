@@ -54,11 +54,7 @@
         </template>
 
         <template #footer>
-          <PrimeButton
-            as="router-link"
-            to="/skills"
-            icon="lucide:star"
-            label="See my stack" />
+          <PrimeButton as="router-link" to="/skills" label="See my stack" />
         </template>
       </PrimeCard>
     </section>
@@ -94,11 +90,7 @@
         </template>
 
         <template #footer>
-          <PrimeButton
-            as="router-link"
-            to="/contacts"
-            icon="lucide:envelope"
-            label="Call me" />
+          <PrimeButton as="router-link" to="/contacts" label="Call me" />
         </template>
       </PrimeCard>
     </section>
