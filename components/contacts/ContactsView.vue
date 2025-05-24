@@ -31,7 +31,7 @@ const message = ref<string>('');
 <template>
   <section class="flex h-full items-center justify-around">
     <div
-      class="flex flex-col md:flex-row gap-4 md:gap-0 justify-between w-full p-8 bg-neutral-900 rounded-lg">
+      class="flex flex-col md:flex-row gap-4 md:gap-0 w-full md:max-w-3xl justify-between p-8 bg-neutral-900 rounded-lg">
       <div class="flex flex-col gap-4">
         <h2 class="text-2xl md:text-4xl tracking-widest font-thin">
           Let's collaborate
