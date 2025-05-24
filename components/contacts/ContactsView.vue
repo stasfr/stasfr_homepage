@@ -1,4 +1,27 @@
 <script setup lang="ts">
+const links = [
+  {
+    href: 'mailto:sfworking@yandex.ru',
+    icon: 'uil:envelope',
+    text: 'sfworking@yandex.ru',
+  },
+  {
+    href: 'https://t.me/stas_fr',
+    icon: 'uil:telegram',
+    text: 't.me/stas_fr',
+  },
+  {
+    href: 'https://github.com/stasfr',
+    icon: 'uil:github',
+    text: 'github.com/stasfr',
+  },
+  {
+    href: 'https://www.linkedin.com/in/stanislav-farkash/',
+    icon: 'uil:linkedin',
+    text: 'linkedin.com/in/stanislav-farkash/',
+  },
+];
+
 const name = ref<string>('');
 const email = ref<string>('');
 const subject = ref<string>('');
@@ -16,50 +39,12 @@ const message = ref<string>('');
 
         <div
           class="flex flex-row md:flex-col gap-2 md:gap-0 text-sm md:text-base">
-          <a
-            class="font-thin tracking-widest"
-            href="mailto:sfworking@yandex.ru">
-            <PrimeButton class="!p-2 md:!hidden">
-              <Icon name="uil:envelope" class="!w-6 !h-6" />
-            </PrimeButton>
-
-            <span class="hidden md:block">sfworking@yandex.ru</span>
-          </a>
-
-          <a
-            class="font-thin tracking-widest"
-            href="https://t.me/stas_fr"
-            target="_blank">
-            <PrimeButton class="!p-2 md:!hidden">
-              <Icon name="uil:telegram" class="!w-6 !h-6" />
-            </PrimeButton>
-
-            <span class="hidden md:block">t.me/stas_fr</span>
-          </a>
-
-          <a
-            class="font-thin tracking-widest"
-            href="https://github.com/stasfr"
-            target="_blank">
-            <PrimeButton class="!p-2 md:!hidden">
-              <Icon name="uil:github" class="!w-6 !h-6" />
-            </PrimeButton>
-
-            <span class="hidden md:block">github.com/stasfr</span>
-          </a>
-
-          <a
-            class="font-thin tracking-widest"
-            href="https://www.linkedin.com/in/stanislav-farkash/"
-            target="_blank">
-            <PrimeButton class="!p-2 md:!hidden">
-              <Icon name="uil:linkedin" class="!w-6 !h-6" />
-            </PrimeButton>
-
-            <span class="hidden md:block">
-              linkedin.com/in/stanislav-farkash/
-            </span>
-          </a>
+          <ContactsUILinkButton
+            v-for="link in links"
+            :key="link.href"
+            :href="link.href"
+            :icon="link.icon"
+            :text="link.text" />
         </div>
       </div>
 
