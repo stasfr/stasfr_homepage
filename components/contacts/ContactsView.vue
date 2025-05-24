@@ -49,30 +49,30 @@ const message = ref<string>('');
       </div>
 
       <div class="flex basis-1/3 flex-col">
-        <p class="text-xl tracking-widest font-thin mb-4">Say hello</p>
+        <p class="text-xl tracking-widest font-thin mb-4">Say hello (soon)</p>
 
         <form class="space-y-4">
           <PrimeFloatLabel variant="on">
-            <PrimeInputText id="name" v-model="name" fluid />
+            <PrimeInputText id="name" v-model="name" fluid disabled />
             <label for="name">Name</label>
           </PrimeFloatLabel>
 
           <PrimeFloatLabel variant="on">
-            <PrimeInputText id="email" v-model="email" fluid />
+            <PrimeInputText id="email" v-model="email" fluid disabled />
             <label for="email">Email</label>
           </PrimeFloatLabel>
 
           <PrimeFloatLabel variant="on">
-            <PrimeInputText id="subject" v-model="subject" fluid />
+            <PrimeInputText id="subject" v-model="subject" fluid disabled />
             <label for="subject">Subject</label>
           </PrimeFloatLabel>
 
           <PrimeFloatLabel variant="on">
-            <PrimeTextarea id="message" v-model="message" fluid />
+            <PrimeTextarea id="message" v-model="message" fluid disabled />
             <label for="message">Message</label>
           </PrimeFloatLabel>
 
-          <PrimeButton label="Send" fluid />
+          <PrimeButton label="Send" fluid disabled />
         </form>
       </div>
     </div>
