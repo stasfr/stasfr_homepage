@@ -29,7 +29,7 @@ const message = ref<string>('');
 </script>
 
 <template>
-  <section class="flex h-full items-center justify-around">
+  <section class="flex h-full flex-1 items-center justify-around">
     <div
       class="flex flex-col md:flex-row gap-4 md:gap-0 w-full md:max-w-3xl justify-between p-8 bg-neutral-900 rounded-lg">
       <div class="flex flex-col gap-4">

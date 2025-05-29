@@ -40,7 +40,7 @@ const projects: TProject[] = [
 </script>
 
 <template>
-  <section class="flex h-full items-center justify-around">
+  <section class="flex h-full flex-1 items-center justify-around">
     <div class="flex flex-col gap-4 p-8 bg-neutral-900 rounded-lg">
       <div class="flex justify-between items-center">
         <h2 class="text-2xl md:text-4xl tracking-widest font-thin">Projects</h2>

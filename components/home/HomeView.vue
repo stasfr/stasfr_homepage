@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="flex flex-col items-center space-y-8">
+  <section class="flex flex-1 flex-col items-center space-y-8">
     <div class="flex items-center gap-4">
       <div class="space-y-2">
         <h1 class="text-3xl xs:text-4xl font-bold">Stanislav Farkash</h1>
