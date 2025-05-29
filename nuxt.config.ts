@@ -32,6 +32,11 @@ export default defineNuxtConfig({
             class: '!bg-zinc-900/30 !backdrop-blur-xs',
           },
         },
+        menu: {
+          root: {
+            class: '!bg-zinc-900/85 !backdrop-blur-xs',
+          },
+        },
       },
     },
     components: {
