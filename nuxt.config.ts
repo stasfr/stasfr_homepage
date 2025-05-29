@@ -26,6 +26,13 @@ export default defineNuxtConfig({
       theme: {
         preset: Aura,
       },
+      pt: {
+        card: {
+          root: {
+            class: '!bg-zinc-900/30 !backdrop-blur-xs',
+          },
+        },
+      },
     },
     components: {
       prefix: 'Prime',
