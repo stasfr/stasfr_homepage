@@ -172,23 +172,23 @@ function shuffleSkills() {
         <div
           v-for="skill in skills"
           :key="skill.name"
-          class="skill-item hover:scale-110 active:scale-110 transition-all duration-300 active:bg-zinc-700 hover:bg-zinc-700 flex gap-2 rounded-lg bg-zinc-800 p-2 size-20 items-center justify-center"
+          class="group hover:scale-110 active:scale-110 transition-all duration-300 active:bg-zinc-700 hover:bg-zinc-700 flex gap-2 rounded-lg bg-zinc-800 p-2 size-20 items-center justify-center"
           :style="{ '--skill-icon-color': skill.color }">
           <Icon
             :name="skill.name"
-            class="!size-12 skill-icon-dynamic-color transition-colors duration-300" />
+            class="!size-12 transition-colors duration-300 text-inherit"
+            :class="[
+              'group-hover:text-[var(--skill-icon-color)]',
+              'group-active:text-[var(--skill-icon-color)]',
+            ]" />
         </div>
       </TransitionGroup>
     </div>
   </section>
 </template>
 
-<style>
+<style scoped>
 .list-shuffle-move {
   transition: transform 0.8s ease;
-}
-.skill-item:hover .skill-icon-dynamic-color,
-.skill-item:active .skill-icon-dynamic-color {
-  color: var(--skill-icon-color);
 }
 </style>
