@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     '@primevue/nuxt-module',
     '@nuxtjs/color-mode',
     '@nuxtjs/i18n',
+    'motion-v/nuxt',
   ],
   css: ['~/assets/css/main.css'],
   vite: {
