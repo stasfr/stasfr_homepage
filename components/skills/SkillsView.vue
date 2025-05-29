@@ -155,7 +155,8 @@ function shuffleSkills() {
 </script>
 
 <template>
-  <section class="flex h-full flex-1 items-center justify-around">
+  <section
+    class="flex h-full flex-1 items-center justify-around touch-manipulation">
     <div
       class="flex flex-col gap-4 p-8 bg-zinc-900/30 backdrop-blur-xs rounded-lg">
       <div class="flex justify-between items-center gap-2">
