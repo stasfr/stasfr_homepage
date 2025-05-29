@@ -59,7 +59,7 @@
       </PrimeCard>
     </section>
 
-    <section class="text-center max-w-xl">
+    <section class="text-center max-w-xl mb-8">
       <PrimeCard>
         <template #title>
           <h3 class="text-2xl md:text-4xl tracking-widest font-thin">

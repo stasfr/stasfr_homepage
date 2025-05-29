@@ -156,8 +156,9 @@ function shuffleSkills() {
 
 <template>
   <section class="flex h-full flex-1 items-center justify-around">
-    <div class="flex flex-col gap-4 p-8 bg-neutral-900 rounded-lg">
-      <div class="flex justify-between items-center">
+    <div
+      class="flex flex-col gap-4 p-8 bg-zinc-900/30 backdrop-blur-xs rounded-lg">
+      <div class="flex justify-between items-center gap-2">
         <h2 class="text-2xl md:text-4xl tracking-widest font-thin">My stack</h2>
         <PrimeButton label="Shuffle" @click="shuffleSkills" />
       </div>
@@ -169,7 +170,7 @@ function shuffleSkills() {
         <div
           v-for="skill in skills"
           :key="skill.name"
-          class="hover:scale-110 transition-all duration-300 hover:bg-neutral-700 flex gap-2 rounded-lg bg-neutral-800 p-2 size-20 items-center justify-center"
+          class="hover:scale-110 transition-all duration-300 hover:bg-zinc-700 flex gap-2 rounded-lg bg-zinc-800 p-2 size-20 items-center justify-center"
           :class="[skill.hoverClass]">
           <Icon :name="skill.name" class="!size-12" />
         </div>

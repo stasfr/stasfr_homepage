@@ -41,7 +41,8 @@ const projects: TProject[] = [
 
 <template>
   <section class="flex h-full flex-1 items-center justify-around">
-    <div class="flex flex-col gap-4 p-8 bg-neutral-900 rounded-lg">
+    <div
+      class="flex flex-col gap-4 p-8 rounded-lg bg-zinc-900/30 backdrop-blur-xs">
       <div class="flex justify-between items-center">
         <h2 class="text-2xl md:text-4xl tracking-widest font-thin">Projects</h2>
       </div>

@@ -24,7 +24,7 @@ const items = ref([
 </script>
 
 <template>
-  <div class="bg-neutral-800">
+  <div class="bg-zinc-900/80 backdrop-blur-xs">
     <div class="container mx-auto flex justify-between items-center p-2">
       <NuxtLink to="/">
         <PrimeButton
