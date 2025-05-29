@@ -8,12 +8,13 @@
         <p class="text-md text-left">Moscow, Russia</p>
       </div>
 
-      <PrimeImage
-        v-tooltip.top="'Любимая выбирала'"
-        src="/img/avatar.webp"
-        alt="avatar"
-        width="200"
-        pt:image:class="rounded-full border-4" />
+      <div v-tooltip.focus.top="'Любимая выбирала'" tabindex="0">
+        <PrimeImage
+          src="/img/avatar.webp"
+          alt="avatar"
+          width="200"
+          pt:image:class="rounded-full border-4" />
+      </div>
     </div>
 
     <p
