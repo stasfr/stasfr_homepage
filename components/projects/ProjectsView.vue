@@ -3,6 +3,14 @@ import type { TProject } from '@/types';
 
 const projects: TProject[] = [
   {
+    title: 'Git-Friday',
+    link: 'https://github.com/stasfr/git-friday',
+    img: 'https://placehold.co/1600x900/1f2937/ffffff?text=Git-Friday',
+    description:
+      'AI-powered CLI tool for analyzing git commits and generating reports.',
+    stack: 'Node.js, TypeScript, OpenAI API',
+  },
+  {
     title: 'PARI IC Partner Portal',
     link: 'https://skpari.ru/',
     img: '/img/skpari.webp',
