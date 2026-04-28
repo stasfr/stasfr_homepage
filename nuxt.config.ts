@@ -1,51 +1,18 @@
-import tailwindcss from '@tailwindcss/vite';
-import Aura from '@primeuix/themes/aura';
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-05-24',
+  compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-
   modules: [
-    '@nuxt/eslint',
-    '@nuxt/fonts',
     '@nuxt/icon',
+    '@nuxt/fonts',
     '@nuxt/image',
-    '@nuxt/test-utils',
-    '@primevue/nuxt-module',
+    '@nuxt/ui',
+    '@formkit/auto-animate',
+    '@pinia/nuxt',
+    '@vueuse/nuxt',
     '@nuxtjs/color-mode',
-    '@nuxtjs/i18n',
-    'motion-v/nuxt',
+    'nuxt-swiper',
+    '@pinia/colada-nuxt',
   ],
   css: ['~/assets/css/main.css'],
-  vite: {
-    plugins: [tailwindcss()],
-  },
-  primevue: {
-    options: {
-      theme: {
-        preset: Aura,
-      },
-      pt: {
-        card: {
-          root: {
-            class: '!bg-zinc-900/30 !backdrop-blur-xs',
-          },
-        },
-        menu: {
-          root: {
-            class: '!bg-zinc-900/85 !backdrop-blur-xs',
-          },
-        },
-      },
-    },
-    components: {
-      prefix: 'Prime',
-    },
-  },
-
-  app: {
-    pageTransition: { name: 'page', mode: 'out-in' },
-    layoutTransition: { name: 'layout', mode: 'out-in' },
-  },
 });
