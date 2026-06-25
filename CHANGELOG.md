@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.0.1](https://github.com/stasfr/stasfr_homepage/compare/v4.0.0...v4.0.1) (2026-06-25)
+
+
+### Bug Fixes
+
+* add vertical navigation menu to header ([f5f1dbe](https://github.com/stasfr/stasfr_homepage/commit/f5f1dbe90d2dd4212c439a415c4c4ccf3abace4d))
+
 ## [4.0.0](https://github.com/stasfr/stasfr_homepage/compare/v3.0.1...v4.0.0) (2026-04-28)
 
 
