@@ -35,5 +35,9 @@ const items = computed<NavigationMenuItem[]>(() => [
       />
     </UTooltip>
   </template>
+
+  <template #body>
+    <UNavigationMenu :items="items" orientation="vertical" class="-mx-2" />
+  </template>
 </UHeader>
 </template>
