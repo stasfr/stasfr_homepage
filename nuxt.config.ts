@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'nuxt-swiper',
     '@pinia/colada-nuxt',
+    '@nuxt/eslint',
   ],
   css: ['~/assets/css/main.css'],
 });

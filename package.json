@@ -7,7 +7,14 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "typecheck": "nuxt typecheck",
     "postinstall": "nuxt prepare",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "lint:eslint": "eslint .",
+    "lint:eslint:fix": "eslint . --fix --cache",
     "release:minor": "commit-and-tag-version --release-as minor",
     "release:major": "commit-and-tag-version --release-as major",
     "release:patch": "commit-and-tag-version --release-as patch"
@@ -34,7 +41,12 @@
     "vue-router": "^5.0.6"
   },
   "devDependencies": {
-    "commit-and-tag-version": "^12.7.1"
+    "@nuxt/eslint": "^1.16.0",
+    "commit-and-tag-version": "^12.7.1",
+    "eslint-plugin-oxlint": "^1.71.0",
+    "oxfmt": "^0.56.0",
+    "oxlint": "^1.71.0",
+    "vue-tsc": "^3.3.5"
   },
   "version": "4.0.0"
 }
